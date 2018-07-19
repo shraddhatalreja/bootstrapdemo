@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+  <script type=text/javasript>
+ $(document).ready(function()
+ {
+ $(window).scroll(function()
+ {
+ if($this.scrollTop() > 100)
+ {$('#scroll').fadeIn();
+ }
+ else
+ {$('#scroll').fadeOut();
+ }
+ }
+ 
+ );
+ 
+ $('#scroll').click(function()
+ {
+ $("html,body").animate(
+ (scrollTop:0),600);
+ return false;
+ }
+ 
+ );
+ }
+ 
+ ); 
+  </script>
+  <style>
+  
+  body {
+      position: relative; 
+  
+  }
+#scroll{
+
+position:fixed;
+right:10px;
+bottom:10px;
+height:50px;
+width:50px;
+background-color:greeen;
+border-radius:60px;
+-webkit-border-radius:60px;
+}
+#scroll span{
+position:absolute;
+top:50%;
+left:50%;
+margin-left:-8px;
+margin-top:-12px;
+border:8px solid transparent;
+border-bottom-color:white;}
+#scroll:hover
+{
+background-color:cyan;
+capacity:1;
+filter:"alpha(capacity=100)"
+-ms-filter:"alpha(capacity=100)"
+}
+  .scroll-top{
+  background:#FFF;
+  position:fixed;
+  bottom:10%;
+  right:5%;
+  }
+  .scroll-top i{
+  font-size:50px;
+  color:#2cb4f3;
+  }
+  .scroll-top i:hover{
+  color:#003322;
+  
+  }
+  </style>
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="50" id="top">
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">  
+<div class= "container">
+<a class="navbar-brand" href="#">Navbar</a>       
+  <button class="navbar-toggler" type="button"  data-toggle="collapse" data-target="#navbarid" >
+  
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  
+<div class="collapse navbar-collapse" id="navbarid">
+ 
+ <ul class="navbar-nav">
+    <li class="nav-item">
+      <a class="nav-link" href="#section1">Section 1</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#section2">Section 2</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#section3">Section 3</a>
+    </li>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+        Section 4
+      </a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="#section41">Link 1</a>
+        <a class="dropdown-item" href="#section42">Link 2</a>
+      </div>
+    </li>
+  </ul>
+  </div>
+  </div>
+</nav>
+
+
+<div
+
+
+<div id="section1" class="container-fluid bg-success" style="padding-top:70px;padding-bottom:70px">
+  <h1>Section 1</h1>
+  <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+  <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+</div>
+<div id="section2" class="container-fluid bg-warning" style="padding-top:70px;padding-bottom:70px">
+  <h1>Section 2</h1>
+  <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+  <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+</div>
+<div id="section3" class="container-fluid bg-secondary" style="padding-top:70px;padding-bottom:70px">
+  <h1>Section 3</h1>
+  <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+  <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+</div>
+<div id="section41" class="container-fluid bg-danger" style="padding-top:70px;padding-bottom:70px">
+  <h1>Section 4 Submenu 1</h1>
+  <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+  <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+</div>
+<div id="section42" class="container-fluid bg-info" style="padding-top:70px;padding-bottom:70px">
+  <h1>Section 4 Submenu 2</h1>
+  <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+  <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+</div>
+<a href="" title="Go to top" id="scroll" style="display:none;">Top
+<span></span> </a>
+
+<div class="scroll-top">
+<a href="#top"data-toggle="tooltip" data-placement="bottom" title="scrolltop"class="social_icons"><i class="fa fa-arrow-alt-circle-up" style="font-size:30px;color:#003322;"></i></a>
+
+</div>  
+</body>
+</html>
